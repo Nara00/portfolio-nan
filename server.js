@@ -3,7 +3,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const path = require('path');
-const { stringify } = require('querystring');
 
 const app = express();
 const PORT = process.env.PORT || 8080; // Step 1
@@ -16,7 +15,7 @@ const routes = require('./routes/api');
 
 
 // Connect to mongo
-mongoose.connect('mongodb://localhost:27017/portfolio', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/portfolio', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -25,24 +24,15 @@ mongoose.connection.on('connected', () => {
     console.log('Mongoose is connected!!!!');
 });
 
+// Data parsing
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
-// Saving data to our mongo db
-// const ejData = {
-//     title: "C++",
-//     category: "programacion", 
-//     description: "mi primer lenguaje de programación",
-//     level : "avanzado"
-// }
+// Step 3
 
-// const newSkill = new skillModel(ejData); //instance of the model
-
-// newSkill.save((error) => {
-//     if (error) {
-//         console.log('Oops, something happend');
-//     } else {
-//         console.log('Data has been saved');
-//     }
-// })
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'));
+}
 
 // HTTP request logger
 app.use(morgan('tiny'));
