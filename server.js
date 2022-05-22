@@ -1,4 +1,5 @@
 // Import npm packages
+require("dotenv").config({path:"./config.env"})
 const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
@@ -28,15 +29,26 @@ mongoose.connection.on('connected', () => {
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// Step 3
+// Step 3 (primer tuto)
 
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('client/build'));
-}
+// if (process.env.NODE_ENV === 'production') {
+//     app.use(express.static('client/build'));
+// }
 
 // HTTP request logger
 app.use(morgan('tiny'));
 app.use('/api', routes);
 
+if(process.eventNames.NODE_ENV === "production") {
+    app.use(express.static(path.join(__dirname, 'client/build')))
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
+    })
+} else{
+    app.get('/', (req, res) => {
+        res.send("API running")
+    })
+}
 
 app.listen(PORT, console.log(`Server is starting at ${PORT}`));
