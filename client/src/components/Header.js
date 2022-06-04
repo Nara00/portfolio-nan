@@ -1,4 +1,6 @@
 import React from 'react'
+import Arrows from './Arrows';
+
 
 
 class Header extends React.Component {
@@ -7,12 +9,17 @@ class Header extends React.Component {
     }
     render() {
         return (
-            <section id="home" className="full-screen">
-                <header>
-                    <h2 className="text-center">SOY</h2>
-                    <h1 className="text-center d-flex flex-shrink-0 justify-content-center flex-wrap">NARA<span style={{color: "#f66e50", borderColor: "var(--secondary)"}}>&nbsp;ABRIL&nbsp;</span><span>NANFARA</span></h1>
-                    <h4 className="text-center" style={{marginBottom: "0", marginTop: "1em"}}>¡Vamos a conocer mi portfolio!</h4>
-                </header>
+            <section id="inicio" style={{ position: " relative", background: " var(--background)", height: " 100vh", width: " 95vw", paddingLeft: " 7vw", paddingRight: " 2vw" }} >
+                <div class="header-sections" >
+                    <p class="p-note" >Este es mi</p>
+                    <p class="p-note" >portfolio</p>
+                </div>
+                <div style={{ paddingTop: " 10vh" }} >
+                    <h2>HOLA! SOY</h2>
+                    <h1>NARA&nbsp;<span style={{ color: " var(--secondary)" }} >ABRIL</span><span>&nbsp;NANFARA.</span></h1>
+                    <p style={{ color: " var(--secondary)" }} >Casi ingeniera de sistemas</p>
+                </div>
+                <Arrows to="#skills" />
             </section>
         );
     }

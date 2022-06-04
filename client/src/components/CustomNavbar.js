@@ -2,19 +2,31 @@ import React from 'react'
 
 class CustomNavbar extends React.Component {
     constructor(props) {
-        super(props) 
+        super(props)
     }
 
     render() {
         return (
-            <nav className="navbar navbar-light navbar-expand-lg sticky-top navigation-clean">
-                <div className="container"><button data-bs-toggle="collapse" className="navbar-toggler" data-bs-target="#navcol-1"><span className="visually-hidden">Toggle navigation</span><i className="fa fa-star fa fa-bars" style={{color: "var(--secondary)"}}></i></button>
-                    <div className="collapse navbar-collapse" id="navcol-1">
-                        <ul className="navbar-nav me-auto">
-                            <li className="nav-item"><a className="nav-link active" href="#">Inicio</a></li>
-                            <li className="nav-item"><a className="nav-link" href="#skills">Skills</a></li>
+            <nav class="navbar navbar-light navbar-expand-md fixed-top py-3 navbar-custom">
+                <div class="container" style={{ padding: " 0px", marginLeft: " 1vw", marginRight: " 1vw", maxWidth: " 100vw" }} >
+                    <a class="navbar-brand d-flex align-items-center text-expanded" href="#">
+                        <span>NAN</span>
+                    </a>
+                    <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2">
+                        <span class="visually-hidden">Toggle navigation</span>
+                        <span class="navbar-toggler-icon">
+                            <i class="fas fa-bars" style={{color: "var(--primary)"}}></i>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navcol-2">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mi</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#footer">Contacto</a></li>
                         </ul>
-                    </div><a className="navbar-brand" href="#" style={{color: "var(--primary)"}}>N<span style={{color: "var(--secondary)"}}>A</span><span>N</span></a>
+                    </div>
                 </div>
             </nav>
         );
