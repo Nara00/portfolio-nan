@@ -3,11 +3,12 @@ Repositorio de mi página personal https://abril-nanfara.herokuapp.com
 
 Pagina full stack:
 * Front-end: prototipado en Figma, esquematizada utilizando Bootstrap Studio, programado en React.
-* API: express js
+* API: express js.
 * Back-end: base de datos no relacional MongoDB, utilizando MongoDB Atlas como servidor.
-* Deploy: Heroku
+* Deploy: Heroku.
+* Gestión de la configuración: Git.
 
-*La finalidad de este proyecto es aprender a crear una aplicación web fullstack desde 0 aprendiendo nuevas tecnologías, es por esto que se encuentra complejidad innecesaria en alguna de las soluciones elegidas*
+*La finalidad de este proyecto es aprender a crear una aplicación web fullstack desde 0 aprendiendo nuevas tecnologías, es por esto que se encuentra complejidad innecesaria en alguna de las soluciones elegidas.*
 
 ## Autora
 
