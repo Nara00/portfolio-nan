@@ -11,8 +11,6 @@ const PORT = process.env.PORT || 8080; // Step 1
 
 const routes = require('./routes/api');
 
-// const MONGODB_URI='mongodb+srv://narananf:gXKg7vxRG2bhic@portfoliodb.wfe2m.mongodb.net/?retryWrites=true&w=majority'
-
 
 
 // Connect to mongo

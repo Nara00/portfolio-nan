@@ -3,6 +3,7 @@
   --secondary: #00DADA;
   --primary: #FFF;
   --background2: #000;
+  --tertiary: #BBB;
   --paragraph-font: 'Inconsolata', monospace;
   --title-font: 'Poppins', sans-serif;
   --extrabold: 800;
@@ -65,15 +66,15 @@ body {
 }
 
 h1 {
-  font-size: 5vw;
+  font-size: 3.5rem;
 }
 
 h2 {
-  font-size: 4vw;
+  font-size: 2.8rem;
 }
 
 p {
-  font-size: 1.5vw;
+  font-size: 1rem;
   margin: 0;
 }
 
@@ -90,9 +91,9 @@ p {
   color: var(--secondary);
 }
 
-.card {
-  height: 25vh;
-  width: 22vw;
+.card-skill {
+  height: 7rem;
+  width: 10rem;
   background: var(--background);
   border: 5px solid #000;
 }
@@ -103,6 +104,7 @@ p {
 
 p {
   font-family: var(--paragraph-font);
+  font-size: 1.2rem;
 }
 
 .header-sections {
@@ -121,4 +123,28 @@ p {
 .p-note{
   color: var(--secondary);
   text-align: right;
+}
+
+.card-title{
+  font-weight: 600;
+}
+
+.card-text{
+  font-size: 1rem !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit; /* no underline */
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+.card-project {
+  height: 12rem;
+  width: 19rem;
+  background: var(--background);
+  border: 5px solid #000;
 }

@@ -4,6 +4,8 @@ import Skills from './Skills';
 import AboutMe from './AboutMe';
 import Projects from './Projects';
 import Footer from './Footer';
+import Testc from './test';
+
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
           </div>
           <div class="col-auto m-auto col-auto" style={{ background: " var(--background)", padding: " 0" }} >
             <Header />
+            {/* <Testc /> */}
             <Skills />
             <AboutMe />
             <Projects />
