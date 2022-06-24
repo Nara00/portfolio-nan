@@ -2,6 +2,7 @@ import React from 'react'
 
 
 const Arrows = (props) => {
+    if (window.innerWidth > 768){
     return (
         <div style={{ bottom: "0", position: "absolute", right: "0" }} >
             <a href={props.to}>
@@ -9,6 +10,7 @@ const Arrows = (props) => {
             </a>
         </div>
     );
+    }
 
 }
 
