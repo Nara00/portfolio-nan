@@ -4,7 +4,6 @@ import Skills from './Skills';
 import AboutMe from './AboutMe';
 import Projects from './Projects';
 import Footer from './Footer';
-import Testc from './test';
 import React, { useState, useEffect } from 'react'
 
 
