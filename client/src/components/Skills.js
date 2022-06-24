@@ -55,11 +55,14 @@ class Skills extends React.Component {
     init = () => {
         let result = []
         
-        result.push(this.getCategoryTitle("Programación"))
+        result.push(this.getCategoryTitle("Sistemas"))
         result.push(this.getCategoryCards(this.state.allSkills.filter(item => item.category === "programacion")))
 
         result.push(this.getCategoryTitle("Diseño"))
         result.push(this.getCategoryCards(this.state.allSkills.filter(item => item.category === "disenio")))
+
+        result.push(this.getCategoryTitle("Humanas"))
+        result.push(this.getCategoryCards(this.state.allSkills.filter(item => item.category === "humanas")))
 
         return (
             result

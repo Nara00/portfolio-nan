@@ -37,9 +37,9 @@ class Projects extends React.Component {
                         <div class="card-body">
                             <h5 class="card-title">{data.title}</h5>
                             <div class="row" style={{ margin: "0", padding: "0", marginTop: " 0.2vw", height: "6rem" }} >
-                            <p class="text-capitalize card-text" style={{ color: "var(--tertiary)", fontWeight: '400' , padding: "0"}} >{data.description}</p>
+                            <p class="card-text" style={{ color: "var(--tertiary)", fontWeight: '400' , padding: "0"}} >{data.description}</p>
                             </div>
-                            <p class="text-capitalize card-text" style={{ paddingTop: ".5rem" }} >&lt;/&gt;{data.language}</p>
+                            <p class="card-text" style={{ paddingTop: ".5rem" }} >&lt;/&gt;{data.language}</p>
                         </div>
                     </a>
                 </div>
